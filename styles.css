@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+.slide-show-container {
+  display: flex;
+  color: #888;
+  font-size: 1.1rem;
+  text-align: center;
+  position: relative;
+}
+
+.slide-show-container .arrow {
+  width: 3rem;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.slide-show-container .arrow.right {
+  right: 0;
+}
+
+.slide-show-container .arrow:hover {
+  background: #ccc7;
+}
+
+.slide-show-container .slides {
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: left 1s;
+}
+
+.slide-show-container .slides .slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100vw;
+}
+
+.slide-show-container > .slides > .slide > p.text {
+  margin: 1.5rem 0;
+}
+
+.slide-show-container > .slides > .slide > img.profile {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.slide-show-container > .slides > .slide > h4 {
+  margin: 0;
+}
+
+.slide-show-container > .slides > .slide > h4.name {
+  margin-top: 2rem;
+}
+
+.slide-show-container > .slides > .slide > h4.designation {
+  font-weight: 400;
+  margin-top: 0.4rem;
+}
+
+.slide-show-container > .slides > .slide > button.view-cv {
+  background-color: #0275d8;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border-color: #0275d8;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.pagination .circle {
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 2px;
+  transition: background 1s;
+}
+
+.pagination .circle.active {
+  background: #555;
+}
+
+.slide-right {
+  animation-name: slide-right;
+  animation-duration: 1.5s;
+}
