@@ -29,6 +29,12 @@ body {
   z-index: 999;
 }
 
+@media only screen and (max-width: 600px) {
+  .slide-show-container .arrow {
+    display: none;
+  }
+}
+
 .slide-show-container .arrow.right {
   right: 0;
 }
