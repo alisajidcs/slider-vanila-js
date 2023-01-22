@@ -1,8 +1,9 @@
 import { Slide, SlideShow, Circle } from "./components";
 
 export class Slider {
-  constructor(data) {
+  constructor(data, delay = 3000) {
     this.data = data;
+    this.delay = delay;
     this.init();
   }
 
@@ -78,7 +79,7 @@ export class Slider {
   timer() {
     this.interval = setInterval(() => {
       this.moveRight();
-    }, 3000);
+    }, this.delay);
   }
 
   resetTimer() {
